@@ -1,6 +1,6 @@
 class nltk {
   package { "nltk":
-    ensure   => installed
+    ensure   => installed,
     provider => pip,
   }
 }
