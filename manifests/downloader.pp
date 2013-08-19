@@ -1,11 +1,11 @@
 define nltk::downloader (
-  $resource = $title
+  $resource = $title,
+  $root_dir = "/usr/share/nltk_data",
 ) {
 
   # All of the data are stored in a subdirectory of this root
   # directory. Depending on the resource we are looking for, we need
   # to define the subdirectory that is used
-  $root_dir = "/usr/share/nltk_data"
   $subdir = $resource ? {
     "abc" => "corpora",
     "alpino" => "corpora",
