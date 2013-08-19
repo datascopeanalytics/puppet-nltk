@@ -8,11 +8,10 @@ download various corpi using the
 requires the use of the `pip` provider for installing the package. On
 a Debian/Ubuntu system, this might look something like this:
 
-```ruby
-class { "nltk":
-  require => Package['python-pip'],
-}
 
-# download the stopwords and punkt corpi
-nltk::downloader { [ "stopwords", "punkt" ]: }
-```
+    class { "nltk":
+      require => Package['python-pip'],
+    }
+
+    # download the stopwords and punkt corpi
+    nltk::downloader { [ "stopwords", "punkt" ]: }
