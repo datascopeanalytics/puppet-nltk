@@ -73,6 +73,7 @@ define nltk::downloader (
     "wordnet_ic" => "corpora",
     "words" => "corpora",
     "ycoe" => "corpora",
+    default => fail("unrecognized corpus name"),
   }
   $dir = "${root_dir}/${subdir}"
     
